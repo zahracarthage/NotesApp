@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ColorPrimaryDark"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imgBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/ColorWhite" />
+    <ImageView
+        android:id="@+id/imgCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_tick"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/ColorWhite" />
+
+    <EditText
+        android:id="@+id/noteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:inputType="text"
+
+        android:layout_margin="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@+id/imgBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="@string/notes_title"
+        android:textColorHint="@color/ColorGray"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="@dimen/_14ssp"
+        android:fontFamily="@font/manrope_bold"
+        android:background="@null"
+
+        />
+    <TextView
+        android:id="@+id/tvDateTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@+id/noteTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColorHint="@color/ColorGray"
+        android:textColor="@color/ColorGray"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="@dimen/_8ssp"
+        android:fontFamily="@font/manrope_bold"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tvDateTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        >
+
+        <View
+            android:layout_width="@dimen/_5sdp"
+            android:layout_height="match_parent"
+            android:background="@color/ColorBlue"
+            android:layout_marginStart="@dimen/_5sdp"/>
+
+    <EditText
+        android:id="@+id/notesSubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:hint="@string/notes_subtitle"
+        android:textColorHint="@color/ColorGray"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="@dimen/_10ssp"
+        android:fontFamily="@font/manrope_regular"
+        android:background="@null"
+        android:inputType="text"
+
+
+        />
+
+        </LinearLayout>
+
+    <EditText
+        android:id="@+id/notesDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:layout_margin="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@+id/l1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="@string/notes_desc"
+        android:textColorHint="@color/ColorGray"
+        android:inputType="textMultiLine"
+        android:textSize="@dimen/_14ssp"
+        android:fontFamily="@font/manrope_regular"
+        android:background="@null"
+
+
+
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
